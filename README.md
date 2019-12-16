@@ -41,7 +41,17 @@ parser.add_argument('--modeldir', type=str, default='data/OZG64')#add by yichen 
             display_step=2) <-每隔多少步进行衡量（对简易任务建议设置较低数值）
 ```
 对lesion的说明:
+在此处按需求注释/取消注释对应行
 https://github.com/xinzhoucs/RNNPrefrontal/blob/9de86068b9968fb8dd93647744a93d5a085da470/network.py#L824
-```
 
-```
+对ruleset的说明：
+ruleset在此处：
+https://github.com/xinzhoucs/RNNPrefrontal/blob/5dd6a3a48c3f48920dda5e71f8e126022eb427da/task.py#L9
+
+对paper.py的说明：
+在paper.py中，注意：
+https://github.com/xinzhoucs/RNNPrefrontal/blob/5dd6a3a48c3f48920dda5e71f8e126022eb427da/paper.py#L24
+此处需对应到adult或young层文件夹(内部文件夹为012...）
+
+训练使用train.py或train_OZG.py
+分析结果使用paper.py
