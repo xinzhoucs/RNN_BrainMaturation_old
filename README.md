@@ -40,6 +40,11 @@ parser.add_argument('--modeldir', type=str, default='data/OZG64')#add by yichen 
             rule_trains=['overlap','zero_gap','gap'], 
             display_step=2) <-每隔多少步进行衡量（对简易任务建议设置较低数值）
 ```
+另注意:
+使用train_OZG时，在此处
+https://github.com/xinzhoucs/RNNPrefrontal/blob/b7e4dd71d66ae7a040d7c86803b6a705023bc6ed/train_OZG.py#L28
+可修改rule数量，ring数量和 n_eachring的数量
+
 对lesion的说明:
 在此处按需求注释/取消注释对应行
 https://github.com/xinzhoucs/RNNPrefrontal/blob/9de86068b9968fb8dd93647744a93d5a085da470/network.py#L824
