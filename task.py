@@ -570,7 +570,7 @@ def odr_(config, mode, anti_response, **kwargs):
 
         # A list of locations of stimuluss and on/off time
         stim_locs = rng.rand(batch_size)*2*np.pi
-        stim_ons  = int(rng.choice([300, 500, 700])/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(500/dt) #last for 0.5s
         fix_offs = stim_offs + int(1500/dt) #last for 1.5s
         tdim     = fix_offs + int(500/dt)
@@ -582,7 +582,7 @@ def odr_(config, mode, anti_response, **kwargs):
         stim_locs  = 2*np.pi*ind_stim_loc/n_stim_loc
         stim_mod   = 1
 
-        stim_ons  = int(700/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(500/dt) #last for 0.5s
         fix_offs = stim_offs + int(1500/dt) #last for 1.5s
         tdim     = fix_offs + int(500/dt)
@@ -636,7 +636,7 @@ def odrd_(config, mode, **kwargs):
 
         # A list of locations of stimuluss and on/off time
         stim_locs = rng.rand(batch_size)*2*np.pi
-        stim_ons  = int(rng.choice([300, 500, 700])/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(500/dt) #last for 0.5s
         distract_ons= stim_offs+int(500/dt) #delay for 0.5s
         distract_offs= distract_ons+int(500/dt) # last for 0.5s
@@ -651,7 +651,7 @@ def odrd_(config, mode, **kwargs):
         stim_locs  = 2*np.pi*ind_stim_loc/n_stim_loc
         stim_mod   = 1
 
-        stim_ons  = int(700/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(500/dt) #last for 0.5s
         distract_ons= stim_offs+int(500/dt) #delay for 0.5s
         distract_offs= distract_ons+int(500/dt) # last for 0.5s
@@ -710,7 +710,7 @@ def overlap_(config, mode, anti_response, **kwargs):
 
         # A list of locations of stimuluss and on/off time
         stim_locs = rng.rand(batch_size)*2*np.pi
-        stim_ons  = int(rng.choice([300, 500, 700])/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         fix_offs = stim_offs #turn off at the same time
         tdim     = fix_offs + int(500/dt)
@@ -723,7 +723,7 @@ def overlap_(config, mode, anti_response, **kwargs):
         stim_locs  = 2*np.pi*ind_stim_loc/n_stim_loc
         stim_mod   = 1
 
-        stim_ons  = int(700/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         fix_offs = stim_offs #turn off at the same time
         tdim     = fix_offs + int(500/dt)
@@ -777,7 +777,7 @@ def zero_gap_(config, mode, anti_response, **kwargs):
 
         # A list of locations of stimuluss and on/off time
         stim_locs = rng.rand(batch_size)*2*np.pi
-        stim_ons  = int(rng.choice([300, 500, 700])/dt)
+        stim_ons  = int(500)/dt)
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         fix_offs = stim_ons #turn off when stim appears
         tdim     = stim_offs + int(500/dt)
@@ -790,7 +790,7 @@ def zero_gap_(config, mode, anti_response, **kwargs):
         stim_locs  = 2*np.pi*ind_stim_loc/n_stim_loc
         stim_mod   = 1
 
-        stim_ons  = int(700/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         fix_offs = stim_ons #turn off when stim appears
         tdim     = stim_offs + int(500/dt)
@@ -843,7 +843,7 @@ def gap_(config, mode, anti_response, **kwargs):
         batch_size = kwargs['batch_size']
 
         # A list of locations of stimuluss and on/off time
-        fix_offs = int(rng.choice([300, 500, 700])/dt) 
+        fix_offs = int(500)/dt) 
         stim_locs = rng.rand(batch_size)*2*np.pi
         stim_ons  = fix_offs+int(100/dt)#gap for 100ms
         stim_offs = stim_ons + int(100/dt) #last for 100ms
@@ -858,7 +858,7 @@ def gap_(config, mode, anti_response, **kwargs):
         stim_locs  = 2*np.pi*ind_stim_loc/n_stim_loc
         stim_mod   = 1
 
-        fix_offs = int(700/dt) 
+        fix_offs = int(500/dt) 
         stim_ons  = fix_offs+int(100/dt)#gap for 100ms
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         tdim     = stim_offs + int(500/dt)
