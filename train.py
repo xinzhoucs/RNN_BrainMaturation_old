@@ -77,6 +77,8 @@ def get_default_hp(ruleset):
             'adult_target_perf': 0.95, #add by yichen
             # Young performance
             'young_target_perf': 0.65, #add by yichen
+            # Infancy performance
+            'infancy_target_perf': 0.35, #add by yichen
             # number of units each ring
             'n_eachring': n_eachring,
             # number of rings
@@ -308,6 +310,7 @@ def train(model_dir,
             model.set_optimizer(var_list=var_list)
 
         step = 0
+        flag_infancy = 1  #add by yichen
         flag_young = 1  #add by yichen
         flag_adult = 1  #add by yichen
         while step * hp['batch_size_train'] <= max_steps:
@@ -324,6 +327,13 @@ def train(model_dir,
                             hp['target_perf']))
                         break
                     #add by yichen start =====================================================
+                    if flag_infancy and log['perf_min'][-1] > model.hp['infancy_target_perf']:
+                        flag_infancy = 0
+                        tools.mkdir_p(model_dir+'/infancy/'+str(seed))
+                        print('Perf reached the infancy target: {:0.2f}'.format(
+                            hp['infancy_target_perf']))
+                        model.save(model_dir+'/infancy/'+str(seed))
+                        tools.save_hp(hp, model_dir+'/infancy/'+str(seed))
                     if flag_young and log['perf_min'][-1] > model.hp['young_target_perf']:
                         flag_young = 0
                         tools.mkdir_p(model_dir+'/young')
@@ -666,16 +676,20 @@ if __name__ == '__main__':
 
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     hp = {'activation': 'softplus',
-          'n_rnn': 64,
+          'n_rnn': 256,
           'mix_rule': True,
           'l1_h': 0.,
-          'use_separate_input': True}
+          'use_separate_input': False}#modified by yichen (True->False)
 
     for i in range(10):
         train(args.modeldir,
-            seed=1,
-            hp=i,
+            seed=i,
+            hp=hp,
             ruleset='all',
-            rule_trains=['contextdelaydm1', 'contextdelaydm2',
-                                    'contextdm1', 'contextdm2'],
+            #rule_trains=['contextdelaydm1', 'contextdelaydm2',
+                                    #'contextdm1', 'contextdm2'],
+            rule_trains=['fdgo', 'reactgo', 'delaygo', 'fdanti', 'reactanti', 'delayanti',
+              'dm1', 'dm2', 'contextdm1', 'contextdm2', 'multidm',
+              'delaydm1', 'delaydm2', 'contextdelaydm1', 'contextdelaydm2', 'multidelaydm',
+              'dmsgo', 'dmsnogo', 'dmcgo', 'dmcnogo'],
             display_step=500)
