@@ -190,7 +190,7 @@ class Trial(object):
     def add_x_loc(self, x_loc):
         """Target response given location."""
         dist = get_dist(x_loc-self.pref)  # periodic boundary
-        if self.config['in_loc_type'] == 'one_hot':
+        if 'in_loc_type' in self.config and self.config['in_loc_type'] == 'one_hot':
             # One-hot input
             x = np.zeros_like(dist)
             ind = np.argmin(dist)
