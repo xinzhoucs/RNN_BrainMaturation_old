@@ -180,11 +180,25 @@ class Trial(object):
             ind_rule = get_rule_index(rule, self.config)
             self.x[on:off, :, ind_rule] = strength
 
+    #def add_x_loc(self, x_loc):
+        #"""Input activity given location."""
+        #dist = get_dist(x_loc-self.pref)  # periodic boundary
+        #dist /= np.pi/8
+        #return 0.8*np.exp(-dist**2/2)
+
+    #add by yichen
     def add_x_loc(self, x_loc):
-        """Input activity given location."""
+        """Target response given location."""
         dist = get_dist(x_loc-self.pref)  # periodic boundary
-        dist /= np.pi/8
-        return 0.8*np.exp(-dist**2/2)
+        if self.config['in_loc_type'] == 'one_hot':
+            # One-hot input
+            x = np.zeros_like(dist)
+            ind = np.argmin(dist)
+            x[ind] = 1.
+        else:
+            dist /= np.pi/8
+            x = 0.8*np.exp(-dist**2/2)
+        return x
 
     def add_y_loc(self, y_loc):
         """Target response given location."""
@@ -777,7 +791,7 @@ def zero_gap_(config, mode, anti_response, **kwargs):
 
         # A list of locations of stimuluss and on/off time
         stim_locs = rng.rand(batch_size)*2*np.pi
-        stim_ons  = int(500)/dt)
+        stim_ons  = int(500/dt)
         stim_offs = stim_ons + int(100/dt) #last for 100ms
         fix_offs = stim_ons #turn off when stim appears
         tdim     = stim_offs + int(500/dt)
@@ -843,7 +857,7 @@ def gap_(config, mode, anti_response, **kwargs):
         batch_size = kwargs['batch_size']
 
         # A list of locations of stimuluss and on/off time
-        fix_offs = int(500)/dt) 
+        fix_offs = int(500/dt) 
         stim_locs = rng.rand(batch_size)*2*np.pi
         stim_ons  = fix_offs+int(100/dt)#gap for 100ms
         stim_offs = stim_ons + int(100/dt) #last for 100ms
