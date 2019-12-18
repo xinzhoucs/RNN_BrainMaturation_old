@@ -28,7 +28,7 @@ def get_default_hp(ruleset):
     num_ring = 1
     n_rule = 3
 
-    n_eachring = 128
+    n_eachring = 8
     n_input, n_output = 1+num_ring*n_eachring+n_rule, n_eachring+1
     hp = {
             # batch size for training
@@ -42,7 +42,9 @@ def get_default_hp(ruleset):
             # whether rule and stimulus inputs are represented separately
             'use_separate_input': False,
             # Type of loss functions
-            'loss_type': 'lsq',
+            'loss_type': 'cross_entropy',#modified by yichen
+            # Input_location_type add by yichen
+            'in_loc_type': 'one_hot',
             # Optimizer
             'optimizer': 'adam',
             # Type of activation runctions, relu, softplus, tanh, elu
@@ -77,6 +79,8 @@ def get_default_hp(ruleset):
             'adult_target_perf': 0.95, #add by yichen
             # Young performance
             'young_target_perf': 0.65, #add by yichen
+            # Infancy performance
+            'infancy_target_perf': 0.35, #add by yichen
             # number of units each ring
             'n_eachring': n_eachring,
             # number of rings
@@ -308,6 +312,7 @@ def train(model_dir,
             model.set_optimizer(var_list=var_list)
 
         step = 0
+        flag_infancy = 1  #add by yichen
         flag_young = 1  #add by yichen
         flag_adult = 1  #add by yichen
         while step * hp['batch_size_train'] <= max_steps:
@@ -324,6 +329,13 @@ def train(model_dir,
                             hp['target_perf']))
                         break
                     #add by yichen start =====================================================
+                    if flag_infancy and log['perf_min'][-1] > model.hp['infancy_target_perf']:
+                        flag_infancy = 0
+                        tools.mkdir_p(model_dir+'/infancy/'+str(seed))
+                        print('Perf reached the infancy target: {:0.2f}'.format(
+                            hp['infancy_target_perf']))
+                        model.save(model_dir+'/infancy/'+str(seed))
+                        tools.save_hp(hp, model_dir+'/infancy/'+str(seed))
                     if flag_young and log['perf_min'][-1] > model.hp['young_target_perf']:
                         flag_young = 0
                         tools.mkdir_p(model_dir+'/young/'+str(seed))
@@ -372,7 +384,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('--modeldir', type=str, default='data/OZG64')#add by yichen
+    parser.add_argument('--modeldir', type=str, default='data/OZG64_fuse_onehot_input')#add by yichen
     args = parser.parse_args()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -380,11 +392,11 @@ if __name__ == '__main__':
           'n_rnn': 64,
           'mix_rule': True,
           'l1_h': 0.,
-          'use_separate_input': True}
+          'use_separate_input': False}#modified by yichen
     for i in range(5):
         train(args.modeldir,
             seed=i,
             hp=hp,
             ruleset='ozg',
             rule_trains=['overlap','zero_gap','gap'],
-            display_step=2)
+            display_step=10)
