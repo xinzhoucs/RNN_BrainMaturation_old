@@ -26,7 +26,7 @@ def get_default_hp(ruleset):
         hp : a dictionary containing training hpuration
     '''
     num_ring = 1
-    n_rule = 3
+    n_rule = 5
 
     n_eachring = 8
     n_input, n_output = 1+num_ring*n_eachring+n_rule, n_eachring+1
@@ -384,19 +384,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('--modeldir', type=str, default='data/OZG64_fuse_onehot_input')#add by yichen
+    parser.add_argument('--modeldir', type=str, default='data/ALLNEW256_separate_onehot_input')#add by yichen
     args = parser.parse_args()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
     hp = {'activation': 'softplus',
-          'n_rnn': 64,
+          'n_rnn': 256,
           'mix_rule': True,
           'l1_h': 0.,
-          'use_separate_input': False}#modified by yichen
+          'use_separate_input': True}#modified by yichen
     for i in range(5):
         train(args.modeldir,
             seed=i,
             hp=hp,
-            ruleset='ozg',
-            rule_trains=['overlap','zero_gap','gap'],
+            ruleset='all_new',
+            rule_trains=['overlap','zero_gap','gap','odr','odrd'],
             display_step=10)
