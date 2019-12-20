@@ -336,16 +336,18 @@ def train(model_dir,
                         tools.save_hp(hp, model_dir+'/infancy/'+str(seed))
                     if flag_young and log['perf_min'][-1] > model.hp['young_target_perf']:
                         flag_young = 0
-                        tools.mkdir_p(model_dir+'/young')
+                        tools.mkdir_p(model_dir+'/young/'+str(seed))
                         print('Perf reached the young target: {:0.2f}'.format(
                             hp['young_target_perf']))
-                        model.save(model_dir+'/young')
+                        model.save(model_dir+'/young/'+str(seed))
+                        tools.save_hp(hp, model_dir+'/young/'+str(seed))
                     if flag_adult and log['perf_min'][-1] > model.hp['adult_target_perf']:
                         flag_adult = 0
-                        tools.mkdir_p(model_dir+'/adult')
+                        tools.mkdir_p(model_dir+'/adult/'+str(seed))
                         print('Perf reached the adult target: {:0.2f}'.format(
                             hp['adult_target_perf']))
-                        model.save(model_dir+'/adult')
+                        model.save(model_dir+'/adult/'+str(seed))
+                        tools.save_hp(hp, model_dir+'/adult/'+str(seed))
                         break
                     #add by yichen end =======================================================
 
