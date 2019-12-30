@@ -693,7 +693,8 @@ def odrd_(config, mode, **kwargs):
     # Response locations
     stim_locs = np.array(stim_locs)
     response_locs = stim_locs
-    distract_locs = (stim_locs+np.pi)%(2*np.pi)
+    #distract_locs = (stim_locs+np.pi)%(2*np.pi)
+    distract_locs = (stim_locs+rng.choice([1,2,3,4,5,6,7])*np.pi/4)%(2*np.pi)
 
     trial = Trial(config, tdim, batch_size)
     trial.add('fix_in', offs=fix_offs)
