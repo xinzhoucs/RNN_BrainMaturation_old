@@ -8,6 +8,8 @@ Scikit-learn (http://scikit-learn.org/stable/) is necessary for many analyses.
 The seaborn package (https://seaborn.pydata.org/) is needed to correctly
 plot a few analysis results.
 
+pic2video.py requires Opencv3. The pillow package and matplotlib package are needed to save the frames. 
+
 ## Reproducing results from the paper
 All analysis results from the paper can be reproduced from paper.py
 
