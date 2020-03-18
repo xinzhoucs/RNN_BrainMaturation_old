@@ -1,5 +1,8 @@
 # RNN to Model Brain Maturation
 This code is adapted from the <a href="https://github.com/gyyang/multitask">Multitask</a> and <a href="https://github.com/nmasse/Short-term-plasticity-RNN">Short-term-plasticity-RNN</a>.
+
+We train RNN to learn working memory task (ODR and ODRD) and anti-saccade task (Overlap, Zero-gap, and Gap).
+
 ## Dependencies
 The code is tested in Tensorflow 1.8.0, Python 2.7 and Python 3.6, and on MacOS 10.13 and Ubuntu 16.04.
 
