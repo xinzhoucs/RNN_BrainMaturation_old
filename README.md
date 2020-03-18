@@ -1,5 +1,5 @@
 # RNN to Model Brain Maturation
-The code is adapted from the <a href="https://github.com/gyyang/multitask">Multitask</a> and <a href="https://github.com/nmasse/Short-term-plasticity-RNN">Short-term-plasticity-RNN</a>
+This code is adapted from the <a href="https://github.com/gyyang/multitask">Multitask</a> and <a href="https://github.com/nmasse/Short-term-plasticity-RNN">Short-term-plasticity-RNN</a>.
 ## Dependencies
 The code is tested in Tensorflow 1.8.0, Python 2.7 and Python 3.6, and on MacOS 10.13 and Ubuntu 16.04.
 
@@ -12,24 +12,9 @@ pic2video.py requires Opencv3. The pillow package and matplotlib package are nee
 
 PSTH_analysis.py requires statsmodels and pandas for ANNOVA analysis.
 
+## Animated Fractional Task Variance (FTV) and Clustering for Task Representation during Maturation
 
-## Pretrained models
-20 pretrained models and their auxillary data files for
-analyses are provided on:
-https://drive.google.com/drive/folders/1L8v-OZgYHVcKh1UKtCJl5QVlz8mkaRxr?usp=sharing
-
-Download and unzip the file then copy /train_all folder to RNNPrefrontal/data.
-
-## Reproducing results from the paper(Task representations in neural networks trained to perform many cognitive tasks 2019)
-All analysis results from the paper can be reproduced from paper.py
-
-Simply go to paper.py, set the model_dir to be the directory of your 
-model files, uncomment the analyses you want to run, and run the file.
-
-## Animated FTV and variance clustering changes
-Create RNNPrefrontal/FTV_frame, RNNPrefrontal/FTV_video, RNNPrefrontal/variance_frame and RNNPrefrontal/variance_video folders
-
-Run train_animation.py to generate the frames then run pic2video to produce the animated results.
+Run train_animation.py to generate the frames then pic2video.py to produce the animated results.
 
 ### Example results
 
@@ -43,12 +28,12 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 <p align="center">
 	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
 	<p align="center">
-		<em>variance clustering video</em>
+		<em>Clustering for Task Representation video</em>
 	</p>
 </p>
 
 ## PSTH analysis
-Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in RNNPrefrontal/figure/figure_data folder
+Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in RNNPrefrontal/figure/figure_data
 
 ### Example results
 
