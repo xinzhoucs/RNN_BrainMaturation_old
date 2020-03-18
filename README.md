@@ -32,11 +32,14 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 
 ### Example results
 
-<p align="center">
+<p align="left">
 	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif" alt="Sample"  width="377" height="366">
 	<p align="center">
 		<em>FTV video</em>
 	</p>
+</p>
+
+<p align="right">
 	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
 	<p align="center">
 		<em>variance clustering video</em>
