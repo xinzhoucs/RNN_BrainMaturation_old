@@ -1,5 +1,5 @@
-# MultiTask Network
-
+# RNN to Model Brain Maturation
+The code is adapted from 
 ## Dependencies
 The code is tested in Tensorflow 1.8.0, Python 2.7 and Python 3.6, and on MacOS 10.13 and Ubuntu 16.04.
 
@@ -11,6 +11,7 @@ plot a few analysis results.
 pic2video.py requires Opencv3. The pillow package and matplotlib package are needed to save the frames. 
 
 PSTH_analysis.py requires statsmodels and pandas for ANNOVA analysis.
+
 
 ## Pretrained models
 20 pretrained models and their auxillary data files for
@@ -43,19 +44,6 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
 	<p align="center">
 		<em>variance clustering video</em>
-	</p>
-</p>
-
-## PSTH analysis
-
-Run train_PSTH then PSTH_analysis.py to generate the analysis results. Figures will be saved in RNNPrefrontal/figure/figure_data
-
-## Example result
-
-<p align="right">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/PSTH_bygrowth_520960to628480.png" alt="Sample"  width="335" height="235">
-	<p align="center">
-		<em>PSTH_bygrowth_520960to628480</em>
 	</p>
 </p>
 
