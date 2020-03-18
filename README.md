@@ -3,6 +3,10 @@ This code is adapted from the <a href="https://github.com/gyyang/multitask">Mult
 
 We train RNN to learn working memory task (ODR and ODRD) and anti-saccade task (Overlap, Zero-gap, and Gap).
 
+<p align="center">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Tasks.jpg"  width="522" height="188">
+</p>
+
 ## Dependencies
 The code is tested in Tensorflow 1.8.0, Python 2.7 and Python 3.6, and on MacOS 10.13 and Ubuntu 16.04.
 
