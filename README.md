@@ -4,7 +4,7 @@ This code is adapted from the <a href="https://github.com/gyyang/multitask">Mult
 We train RNN to learn working memory task (ODR and ODRD) and anti-saccade task (Overlap, Zero-gap, and Gap).
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Tasks.jpg"  width="783" height="282">
+	<img src="https://github.com/xinzhoucs/RNN_BrainMaturation/blob/master/example/Tasks.jpg"  width="783" height="282">
 </p>
 
 ## Dependencies
@@ -26,26 +26,26 @@ Run train_animation.py to generate the frames then pic2video.py to produce the a
 ### Example results
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif" alt="Sample"  width="377" height="366">
+	<img src="https://github.com/xinzhoucs/RNN_BrainMaturation/blob/master/example/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif" alt="Sample"  width="377" height="366">
 	<p align="center">
 		<em>FTV video</em>
 	</p>
 </p>
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
+	<img src="https://github.com/xinzhoucs/RNN_BrainMaturation/blob/master/example/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
 	<p align="center">
 		<em>Clustering for Task Representation video</em>
 	</p>
 </p>
 
 ## PSTH analysis
-Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in RNNPrefrontal/figure/figure_data
+Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in RNN_BrainMaturation/figure/figure_data
 
 ### Example results
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/PSTH_bygrowth_520960to628480.png"  width="402" height="282">
+	<img src="https://github.com/xinzhoucs/RNN_BrainMaturation/blob/master/example/PSTH_bygrowth_520960to628480.png"  width="402" height="282">
 	<p align="center">
 		<em>PSTH_bygrowth_520960to628480</em>
 	</p>
@@ -54,4 +54,4 @@ Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in R
 ## Additional notes
 For ruleset：
 Rulesets are listed here：
-https://github.com/xinzhoucs/RNNPrefrontal/blob/64d3af827df8899f1759cef0fecfe3b92ca73c68/task.py#L8
+https://github.com/xinzhoucs/RNN_BrainMaturation/blob/64d3af827df8899f1759cef0fecfe3b92ca73c68/task.py#L8
