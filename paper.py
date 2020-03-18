@@ -25,12 +25,6 @@ root_dir = './data/train_all'
 
 # root_dir = './data/tanhgru'
 #
-# root_dir = './data/OZG64/adult'
-# model_dir = root_dir + '/1'
-#
-# root_dir = './data/young_adult'
-# model_dir = root_dir + '/adult'
-#
 #
 # # Performance Analysis-----------------------------------------------------
 # standard_analysis.schematic_plot(model_dir=model_dir)
