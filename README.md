@@ -4,7 +4,7 @@ This code is adapted from the <a href="https://github.com/gyyang/multitask">Mult
 We train RNN to learn working memory task (ODR and ODRD) and anti-saccade task (Overlap, Zero-gap, and Gap).
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Tasks.jpg"  width="522" height="188">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/Tasks.jpg"  width="783" height="282">
 </p>
 
 ## Dependencies
