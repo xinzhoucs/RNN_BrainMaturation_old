@@ -32,11 +32,9 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 
 ### Example results
 
-![image](https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif)
-
 <p align="center">
 	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif" alt="Sample"  width="377" height="366">
-	<p align="center">
+	<p align="left">
 		<em>FTV video</em>
 	</p>
 </p>
