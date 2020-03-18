@@ -46,6 +46,14 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 	</p>
 </p>
 
+## PSTH analysis
+
+Run train_PSTH then PSTH_analysis.py to generate the analysis results. Figures will be saved in RNNPrefrontal/figure/figure_data
+
+## Example result
+
+
+
 ## Additional notes
 对lesion的说明:
 在此处按需求注释/取消注释对应行
