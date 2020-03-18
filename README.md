@@ -10,6 +10,8 @@ plot a few analysis results.
 
 pic2video.py requires Opencv3. The pillow package and matplotlib package are needed to save the frames. 
 
+PSTH_analysis.py requires statsmodels and pandas for ANNOVA analysis.
+
 ## Reproducing results from the paper
 All analysis results from the paper can be reproduced from paper.py
 
