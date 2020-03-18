@@ -38,15 +38,13 @@ Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in R
 ### Example results
 
 <p align="center">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/PSTH_bygrowth_520960to628480.png"  width="335" height="235">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/example/PSTH_bygrowth_520960to628480.png"  width="402" height="282">
 	<p align="center">
 		<em>PSTH_bygrowth_520960to628480</em>
 	</p>
 </p>
 
 ## Additional notes
-
-
 For ruleset：
 Rulesets are listed here：
-
+https://github.com/xinzhoucs/RNNPrefrontal/blob/64d3af827df8899f1759cef0fecfe3b92ca73c68/task.py#L8
