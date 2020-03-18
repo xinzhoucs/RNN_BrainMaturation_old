@@ -20,9 +20,14 @@ from analysis import posttrain_analysis
 
 # Directories of the models and the sample model
 # Change these to your directories
+
+root_dir = './data/train_all'
+
 # root_dir = './data/tanhgru'
-root_dir = './data/OZG64/adult'
-model_dir = root_dir + '/1'
+
+#root_dir = './data/OZG64/adult'
+#model_dir = root_dir + '/1'
+
 #root_dir = './data/young_adult'
 #model_dir = root_dir + '/adult'
 
@@ -65,9 +70,9 @@ model_dir = root_dir + '/1'
 #
 #
 # # FTV Analysis-------------------------------------------------------------
-variance.plot_hist_varprop_selection(root_dir)
+#variance.plot_hist_varprop_selection(root_dir)
 #variance.plot_hist_varprop_selection('./data/tanhgru')
-variance.plot_hist_varprop_all(root_dir, plot_control=True)
+#variance.plot_hist_varprop_all(root_dir, plot_control=True)
 #
 #
 # # ContextDM analysis-------------------------------------------------------
