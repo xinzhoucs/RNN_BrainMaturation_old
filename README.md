@@ -52,7 +52,12 @@ Run train_PSTH then PSTH_analysis.py to generate the analysis results. Figures w
 
 ## Example result
 
-
+<p align="right">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/PSTH_bygrowth_520960to628480.png" alt="Sample"  width="335" height="235">
+	<p align="center">
+		<em>PSTH_bygrowth_520960to628480</em>
+	</p>
+</p>
 
 ## Additional notes
 对lesion的说明:
