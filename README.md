@@ -60,10 +60,10 @@ Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in R
 </p>
 
 ## Additional notes
-对lesion的说明:
-在此处按需求注释/取消注释对应行
+For lesion:
+Uncomment/comment these lines to meet your needs
 https://github.com/xinzhoucs/RNNPrefrontal/blob/9de86068b9968fb8dd93647744a93d5a085da470/network.py#L824
 
-对ruleset的说明：
-ruleset在此处：
+For ruleset：
+Rulesets are listed here：
 https://github.com/xinzhoucs/RNNPrefrontal/blob/5dd6a3a48c3f48920dda5e71f8e126022eb427da/task.py#L9
