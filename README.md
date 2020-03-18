@@ -33,7 +33,14 @@ Run train_animation.py to generate the frames then run pic2video to produce the 
 ### Example results
 FTV video:
 
-![image](https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif){:height="100" width="100"}
+![image](https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif)
+
+<p align="center">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_FTV_20fps.gif" alt="Sample"  width="250" height="140">
+	<p align="center">
+		<em>图片示例2</em>
+	</p>
+</p>
 
 ## Additional notes
 对lesion的说明:
