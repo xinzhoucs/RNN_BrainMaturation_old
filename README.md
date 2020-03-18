@@ -1,5 +1,5 @@
 # RNN to Model Brain Maturation
-The code is adapted from the <a href="https://github.com/gyyang/multitask">multitask</a>
+The code is adapted from the <a href="https://github.com/gyyang/multitask">Multitask</a> and <a href="https://github.com/nmasse/Short-term-plasticity-RNN">Short-term-plasticity-RNN</a>
 ## Dependencies
 The code is tested in Tensorflow 1.8.0, Python 2.7 and Python 3.6, and on MacOS 10.13 and Ubuntu 16.04.
 
