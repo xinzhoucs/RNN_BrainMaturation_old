@@ -52,10 +52,10 @@ Run train_PSTH.py then PSTH_analysis.py. The analysis results will be saved in R
 
 ### Example results
 
-<p align="right">
-	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/Randodrd_ALLNEW256_fuse_onehot_input_variance_20fps.gif" alt="Sample"  width="324" height="204">
+<p align="center">
+	<img src="https://github.com/xinzhoucs/RNNPrefrontal/blob/master/PSTH_bygrowth_520960to628480.png"  width="335" height="235">
 	<p align="center">
-		<em>variance clustering video</em>
+		<em>PSTH_bygrowth_520960to628480</em>
 	</p>
 </p>
 
