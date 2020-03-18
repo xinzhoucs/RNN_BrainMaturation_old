@@ -25,6 +25,8 @@ All analysis results from the paper can be reproduced from paper.py
 Simply go to paper.py, set the model_dir to be the directory of your 
 model files, uncomment the analyses you want to run, and run the file.
 
+
+
 主要使用：train.py,train_OZG.py,paper.py
 对train和train_OZG.py：
 ```
@@ -45,10 +47,6 @@ parser.add_argument('--modeldir', type=str, default='data/OZG64')#add by yichen 
             rule_trains=['overlap','zero_gap','gap'], 
             display_step=2) <-每隔多少步进行衡量（对简易任务建议设置较低数值）
 ```
-另注意:
-使用train_OZG时，在此处
-https://github.com/xinzhoucs/RNNPrefrontal/blob/b7e4dd71d66ae7a040d7c86803b6a705023bc6ed/train_OZG.py#L28
-可修改rule数量，ring数量和 n_eachring的数量
 
 对lesion的说明:
 在此处按需求注释/取消注释对应行
@@ -57,11 +55,3 @@ https://github.com/xinzhoucs/RNNPrefrontal/blob/9de86068b9968fb8dd93647744a93d5a
 对ruleset的说明：
 ruleset在此处：
 https://github.com/xinzhoucs/RNNPrefrontal/blob/5dd6a3a48c3f48920dda5e71f8e126022eb427da/task.py#L9
-
-对paper.py的说明：
-在paper.py中，注意：
-https://github.com/xinzhoucs/RNNPrefrontal/blob/5dd6a3a48c3f48920dda5e71f8e126022eb427da/paper.py#L24
-此处需对应到adult或young层文件夹(内部文件夹为012...）
-
-训练使用train.py或train_OZG.py
-分析结果使用paper.py
