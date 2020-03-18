@@ -12,17 +12,18 @@ pic2video.py requires Opencv3. The pillow package and matplotlib package are nee
 
 PSTH_analysis.py requires statsmodels and pandas for ANNOVA analysis.
 
-## Reproducing results from the paper
+## Pretrained models
+20 pretrained models and their auxillary data files for
+analyses are provided on:
+https://drive.google.com/drive/folders/1L8v-OZgYHVcKh1UKtCJl5QVlz8mkaRxr?usp=sharing
+
+Download and unzip the file then copy /train_all folder to RNNPrefrontal/data.
+
+## Reproducing results from the paper(Task representations in neural networks trained to perform many cognitive tasks 2019)
 All analysis results from the paper can be reproduced from paper.py
 
 Simply go to paper.py, set the model_dir to be the directory of your 
 model files, uncomment the analyses you want to run, and run the file.
-
-## Pretrained models
-We provide 20 pretrained models and their auxillary data files for
-analyses.
-https://drive.google.com/drive/folders/1L8v-OZgYHVcKh1UKtCJl5QVlz8mkaRxr?usp=sharing
-Download the file and copy /train_all folder to RNNPrefrontal/data
 
 主要使用：train.py,train_OZG.py,paper.py
 对train和train_OZG.py：
